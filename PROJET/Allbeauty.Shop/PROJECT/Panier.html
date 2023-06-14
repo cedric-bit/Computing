@@ -205,7 +205,7 @@
       <div class="row">
         <div class="col-12 text-center bg-light">
           <h1 style="font-family: 'Times New Roman', serif; " >  MON PANIER <br> <br></h1>
-          <img src="https://res.cloudinary.com/djemqxh13/image/upload/v1675685074/fem1_jzpic2.png"class="header-image">    
+          <img src="https://res.cloudinary.com/djemqxh13/image/upload/v1675699175/Image/ezgif.com-webp-to-png_1_hpt7j1.png"class="header-image">    
            <p  style="font-family: 'Times New Roman', serif; "  style="text-align: justify; margin: 0 auto; width: 50%;"> La vie est trop courte pour avoir les cheveux ennuyeux. <br> <br></p>
            <p  style="font-family: 'Times New Roman', serif; "   style="text-align: justify; margin: 0 auto; width: 50%;">  Laissez votre personnalité briller à travers vos cheveux <br> <br> </p>
            <p  style="font-family: 'Times New Roman', serif; "  style="text-align: justify; margin: 0 auto; width: 50%;"> Amusez-vous avec votre style, laissez votre coiffure parler pour vous <br> <br> </p>
@@ -414,7 +414,7 @@
         console.log(JSON.parse(localStorage.getItem('cart')));
 
 
-        function updateCartDisplay() {
+        /*function updateCartDisplay() {
           // Récupérer le panier du localStorage
           var cart = JSON.parse(localStorage.getItem('cart'));
 
@@ -468,20 +468,18 @@
          // document.getElementById('total-price').innerHTML = "Prix total: " + totalPrice + "€";
 }
 
+*/
 
 
+       function removeFromCart(index) {
+       
+        cart.splice(index, 1); // Supprimer le produit du panier en utilisant l'index
+        localStorage.setItem('cart', JSON.stringify(cart)); // Mettre à jour le panier dans le localStorage
+        location.reload(); // Recharger la page pour mettre à jour l'affichage du panier
+            
 
-        function removeFromCart(index) {
-          // Récupérer le panier du localStorage
-          var cart = JSON.parse(localStorage.getItem('cart'));
 
-          // Supprimer l'article à l'index spécifié
-          cart.splice(index, 1);
-
-          // Stocker le nouveau panier dans le localStorage
-          localStorage.setItem('cart', JSON.stringify(cart));
-
-          updateCartDisplay();
+          //updateCartDisplay();
 }
 
 
